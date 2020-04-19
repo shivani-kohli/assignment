@@ -1,0 +1,12 @@
+@import "src/assets/scss/variables";
+
+.invalid-input-text {
+    margin-left: 0.7rem;
+}
+.invalid-input-text{
+    margin-left: 0.7rem;
+    color:$primary-red;
+    margin-top: .25rem;
+    font-size: 80%;
+    width: 100%;
+}

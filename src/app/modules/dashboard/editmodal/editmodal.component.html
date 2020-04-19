@@ -1,0 +1,42 @@
+<div fxLayout="column" fxLayoutGap="1rem">
+    <div fxLayout="row" class="dialog-header">
+        <div fxFlex class="black-text-small">Edit Tiles</div>
+        <mat-icon (click)="closeDialog()" svgIcon="close"></mat-icon>
+    </div>
+    <div mat-dialog-content>
+                <form fxLayout="column" fxLayoutGap="1rem" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group fullWidth">
+                                <span class="formLabel">Width*</span>
+                                <input  type="number" formControlName="width" [ngClass]="{ 'invalid-input-box': submitted && f.width.errors }" class="form-control" name="width">
+                                <div *ngIf="submitted && f.width.errors" class="invalid-input-text">
+                                    <div *ngIf="f.width.errors.required">Width is required</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group fullWidth">
+                                <span class="formLabel">Height*</span>
+                                <input  type="number" formControlName="height" [ngClass]="{ 'invalid-input-box': submitted && f.height.errors }" class="form-control" name="height">
+                                <div *ngIf="submitted && f.height.errors" class="invalid-input-text">
+                                    <div *ngIf="f.height.errors.required">Height is required</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group fullWidth">
+                                <span class="formLabel">Margin*</span>
+                                <input  type="number" formControlName="margin" [ngClass]="{ 'invalid-input-box': submitted && f.margin.errors }" class="form-control" name="margin">
+                                <div *ngIf="submitted && f.margin.errors" class="invalid-input-text">
+                                    <div *ngIf="f.margin.errors.required">Margin is required</div>
+                                </div>
+                            </div>
+           
+
+                    <div fxLayout="row" fxLayout.xs="column">
+                        <div fxFlex="50%">
+                            <button class="fullWidth btn btn-primary"  mat-raised-button color="primary">Update</button>
+                        </div>
+                    </div>
+                </form>
+    </div>
+</div>
+
+

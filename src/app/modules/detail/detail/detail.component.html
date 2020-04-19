@@ -1,0 +1,20 @@
+<div fxLayout="row">
+    <div fxFlex="4%"></div>
+<div fxFlex class="card-bg" fxLayout="column" fxLayoutGap="1rem">
+    <div fxLayout="row" class="dialog-header">
+        <div fxFlex class="black-text-big">{{detailData.tilename}}</div>
+    </div>
+    <div>
+        <div fxLayout="column" fxLayoutGap="2rem">
+            <div fxLayout="column">
+                <div class="black-text-small">{{detailData.tileabout}}</div>
+            </div>
+            <div fxLayout="row">
+                <button fxFlex="30%" (click)="navigateBack()" class="fullWidth btn btn-warning" mat-raised-button color="primary">Back To Tiles</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div fxFlex="4%"></div>
+</div>

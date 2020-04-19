@@ -1,0 +1,17 @@
+<div fxLayout="column" fxLayoutGap="1rem">
+    <div fxLayout="row" class="dialog-header">
+        <div fxFlex class="black-text-big">{{details.tilename}}</div>
+        <mat-icon (click)="closeDialog()" svgIcon="close"></mat-icon>
+    </div>
+    <div mat-dialog-content>
+        <div fxLayout="column" fxLayoutGap="2rem">
+            <div fxLayout="column">
+                <div class="black-text-small">{{details.tileinfo}}</div>
+            </div>
+            <div fxLayout="row">
+                <button fxFlex="30%" (click)="closeDialog()" class="fullWidth btn btn-warning" mat-raised-button color="primary">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
